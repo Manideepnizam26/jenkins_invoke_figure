@@ -1,4 +1,4 @@
-
+import sys
 
 class Calculator:
 
@@ -9,5 +9,11 @@ class Calculator:
         return a+b
 
 if __name__ == '__main__':
-    c = Calculator()
-    print(c.add(1,2))
+    number_of_params_passed = len(sys.argv)
+    a = int(sys.argv[1])
+    b = int(sys.argv[2])
+
+    print("a:",a)
+    print("b:",b)
+    calc = Calculator()
+    print(calc.add(a,b))
